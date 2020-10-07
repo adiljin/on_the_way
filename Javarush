@@ -24,15 +24,26 @@ public class Solution {
     public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(reader.readLine());
-        if (N != 0){
-            int n = 0;
+        int maxPizda = 0;
+        if (N > 0){
+            for(int i = 0; i<N; i++){
+                int pizda = Integer.parseInt(reader.readLine());
+                if(pizda>maxPizda){
+                    maxPizda = pizda;
+                }
+            }
+
+            /*int n = 0;
             while(true) {
                 int newN = Integer.parseInt(reader.readLine());
                 if (newN > 0) {
                     if (newN > N) N = newN;
-            } else break;
+                } else break;
             }
-            System.out.println(N);
+            System.out.println(N);*/
+        }
+
+        System.out.println(maxPizda);
         }
     }
 }
